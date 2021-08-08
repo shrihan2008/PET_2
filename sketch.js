@@ -29,8 +29,9 @@ function setup() {
   feed.position(500,100);
   feed.mousePressed(addFoods)
   
-  dog2=createSprite(500,400,20,20)
+  dog2=createSprite(500,400,20,20);
   dog2.addImage(dog);
+  dog.resize(100,100)
 
 }
 
@@ -72,6 +73,7 @@ function readLastFed(data){
 
 function feedDog(){
   dog2.addImage(dog_happy);
+  dog_happy.resize(100,100)
   if (foodObj.getFoodStock() > 1)
   {
     foodObj.updateFoodStock(foodObj.getFoodStock()-1)
